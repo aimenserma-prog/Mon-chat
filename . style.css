@@ -1,0 +1,41 @@
+/* Zone centrale */
+.scan-area {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Cadre scanner */
+.scan-frame {
+  position: relative;
+  width: 250px;
+  height: 160px;
+  margin: 0 auto 15px;
+  border: 2px dashed #14b8a6;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Ligne de scan animée */
+.scan-line {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, transparent, #22c55e, transparent);
+  animation: scanMove 2s linear infinite;
+  display: none;
+}
+
+/* Animation */
+@keyframes scanMove {
+  from { top: 0; }
+  to { top: 100%; }
+}
+
+/* Texte état */
+#scanStatus {
+  color: #38bdf8;
+  font-size: 14px;
+}
+
